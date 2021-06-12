@@ -41,7 +41,7 @@ router.post('/sign_up', async (req, res) => {
             res.json(resql);
         }
     } else {
-        res.send('email / password/ name missing').status(400);
+        res.status(400).send('email / password/ name missing');
     }
 });
 
@@ -86,13 +86,13 @@ router.post('/sign_in', async (req, res) => {
                 });
 
             } else {
-                res.send('wrong password').status(400);
+                res.status(400).send('wrong password');
             }
         } else {
-            res.send('no email exists').status(400);
+            res.status(400).send('no email exists');
         }
     } else {
-        res.send('email / password missing').status(400);
+        res.status(400).send('email / password missing');
     }
 });
 
