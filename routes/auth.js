@@ -21,7 +21,7 @@ router.post('/sign_up', async (req, res) => {
         const user = gqlres.data.owners[0];
 
         if (user) {
-            res.send('user exists').status(400);
+            res.status(400).send('user exists');
         } else {
             const encryptedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(2));
 
