@@ -7,7 +7,7 @@ app.use(bodyParser.json())
 
 app.use('/auth', require('./routes/auth'));
 
-app.use('/graphql',(res, res) => {
+app.post('/graphql',(res, res) => {
     res.redirect(process.env.HASURA_GQL_ENDPOINT);
 })
 
