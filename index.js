@@ -15,4 +15,5 @@ app.post('/graphql',(req, res) => {
 
 app.listen(process.env.PORT || 3000, ()=> {
     console.log('Express app is listening on port '+ process.env.PORT || 3000);
+	console.log('YOLO');
 });
